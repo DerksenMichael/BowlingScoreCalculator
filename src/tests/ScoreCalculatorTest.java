@@ -76,4 +76,10 @@ class ScoreCalculatorTest {
 		values.addAll(Arrays.asList(7, 3, 10, 3, 1, 4, 5, 6, 4, 5, 5, 10, 1, 0, 7, 2, 8, 2, 2));
 		assertEquals(115, calculator.rollAll(values));
 	}
+	
+	@Test
+	void testFail() {
+		values.addAll(Arrays.asList(7, 3, 10, 3, 1, 4, 5, 6, 4, 5, 5, 10, 1, 0, 7, 2, 8, 2, 2));
+		assertNotEquals(105, calculator.rollAll(values));
+	}
 }
