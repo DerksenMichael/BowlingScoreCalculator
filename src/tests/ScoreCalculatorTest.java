@@ -26,7 +26,7 @@ class ScoreCalculatorTest {
 		calculator.roll(6);
 		assertEquals(6, calculator.getFrames().get(0).getRolls()[0]);
 	}
-	
+
 	@Test
 	void testRollingHard() {
 		calculator.roll(2);
@@ -37,7 +37,7 @@ class ScoreCalculatorTest {
 		calculator.roll(3);
 		assertEquals(3, calculator.getFrames().get(3).getRolls()[1]);
 	}
-	
+
 	@Test
 	void testScoreMax() {
 		for (int i = 0; i < 12; i++) {
