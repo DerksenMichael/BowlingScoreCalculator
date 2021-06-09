@@ -1,6 +1,7 @@
 package calculator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Calculator {
 
@@ -19,7 +20,7 @@ public class Calculator {
 	}
 
 	public void roll(int roll) {
-		if (getLastFrame().getAvailableThrows() < 1) {
+		if (getLastFrame().getAvailableRolls() < 1) {
 			frames.add(new Frame());
 		}
 		applyBonus(roll);
@@ -31,7 +32,7 @@ public class Calculator {
 		int score = 0;
 		for (Frame frame : frames) {
 			if (counter++ < 10) {
-				if (frame.getAvailableThrows() == 0 && frame.getBonusCounter() == 0) {
+				if (frame.getAvailableRolls() == 0 && frame.getBonusCounter() == 0) {
 					score += frame.getScore();
 				}
 			}
@@ -52,6 +53,10 @@ public class Calculator {
 				thirdLastFrame.applyBonus(roll);
 			}
 		}
+	}
+	
+	public ArrayList<Frame> getFrames() {
+		return new ArrayList<Frame>(frames);
 	}
 
 	private Frame getLastFrame() {

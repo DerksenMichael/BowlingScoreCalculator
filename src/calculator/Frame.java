@@ -1,5 +1,7 @@
 package calculator;
 
+import java.util.Arrays;
+
 public class Frame {
 	
 	private int[] rolls;
@@ -32,6 +34,10 @@ public class Frame {
 	public void applyBonus(int roll) {
 		bonus += roll;
 		bonusCounter--;
+	}
+	
+	public int[] getRolls() {
+		return Arrays.copyOf(rolls, rolls.length);
 	}
 	
 	public int getScore() {
