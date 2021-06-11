@@ -43,7 +43,7 @@ class ScoreCalculatorTest {
 		for (int i = 0; i < 12; i++) {
 			values.add(10);
 		}
-		assertEquals(300, calculator.rollAll(values));
+		assertEquals(300, calculator.roll(values));
 	}
 
 	@Test
@@ -51,7 +51,7 @@ class ScoreCalculatorTest {
 		for (int i = 0; i < 20; i++) {
 			values.add(0);
 		}
-		assertEquals(0, calculator.rollAll(values));
+		assertEquals(0, calculator.roll(values));
 	}
 
 	@Test
@@ -60,7 +60,7 @@ class ScoreCalculatorTest {
 			values.add(9);
 			values.add(0);
 		}
-		assertEquals(90, calculator.rollAll(values));
+		assertEquals(90, calculator.roll(values));
 	}
 
 	@Test
@@ -68,18 +68,18 @@ class ScoreCalculatorTest {
 		for (int i = 0; i < 21; i++) {
 			values.add(5);
 		}
-		assertEquals(150, calculator.rollAll(values));
+		assertEquals(150, calculator.roll(values));
 	}
 
 	@Test
 	void testCommon() {
 		values.addAll(Arrays.asList(7, 3, 10, 3, 1, 4, 5, 6, 4, 5, 5, 10, 1, 0, 7, 2, 8, 2, 2));
-		assertEquals(115, calculator.rollAll(values));
+		assertEquals(115, calculator.roll(values));
 	}
 	
 	@Test
 	void testFail() {
 		values.addAll(Arrays.asList(7, 3, 10, 3, 1, 4, 5, 6, 4, 5, 5, 10, 1, 0, 7, 2, 8, 2, 2));
-		assertNotEquals(105, calculator.rollAll(values));
+		assertNotEquals(105, calculator.roll(values));
 	}
 }

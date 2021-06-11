@@ -1,7 +1,6 @@
 package calculator;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Calculator {
 
@@ -12,7 +11,7 @@ public class Calculator {
 		frames.add(new Frame());
 	}
 
-	public int rollAll(ArrayList<Integer> rolls) {
+	public int roll(ArrayList<Integer> rolls) {
 		for (Integer roll : rolls) {
 			roll(roll);
 		}
