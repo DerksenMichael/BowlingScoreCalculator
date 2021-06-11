@@ -55,6 +55,16 @@ public class Calculator {
 		}
 	}
 	
+	public void displayScore() {
+		int counter = 0;
+		for (Frame frame : frames) {
+			System.out.println("Frame " + ++counter);
+			System.out.println("Roll 1: " + frame.getRolls()[0]);
+			System.out.println("Roll 2: " + frame.getRolls()[1]);
+			System.out.println("Score : " + frame.getScore());
+		}
+	}
+	
 	public ArrayList<Frame> getFrames() {
 		return new ArrayList<Frame>(frames);
 	}
