@@ -61,8 +61,9 @@ public class Calculator {
 			System.out.println("Frame " + ++counter);
 			System.out.println("Roll 1: " + frame.getRolls()[0]);
 			System.out.println("Roll 2: " + frame.getRolls()[1]);
-			System.out.println("Score : " + frame.getScore());
+			System.out.println("Score : " + frame.getScore() + "\n");
 		}
+		System.out.println("Gamescore: " + calculateScore());
 	}
 	
 	public ArrayList<Frame> getFrames() {
